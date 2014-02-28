@@ -4,7 +4,7 @@ angular.module('App.service.repository', [])
 
             return {
 
-                data: [], //angular.copy( _cart ),
+                data: [],
                 status: '',
                 method: 'GET',
                 url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=2FV68p9G3BGVbc7IdLq02Q&_render=json&feedcount=10&feedurl=http%3A%2F%2Fxml.corriereobjects.it%2Frss%2Fhomepage.xml',
@@ -87,7 +87,7 @@ angular.module('App.service.repository', [])
                         }
                         i++;
                     }
-console.log("Trovato post al giro numero: " + i);
+
                     if ( found < 0 ) {
                         found = false
                     } else {
