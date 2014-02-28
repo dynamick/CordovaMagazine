@@ -1,0 +1,118 @@
+/* app css stylesheet */
+body { padding-top: 50px; }
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+.menu:before {
+    content: "[";
+}
+.menu:after {
+    content: "]";
+}
+.menu > li {
+    display: inline;
+}
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+/* Slide animation */
+/*
+.view-animate-container {
+    position: relative;
+    margin-top: 60px;
+}
+.slide {
+    position: relative;
+}
+.slide.ng-leave,
+.slide.ng-enter {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+    -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+    -ms-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+    -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.slide.left.ng-enter,
+.slide.right.ng-leave.ng-leave-active {
+    left: 100%;
+    opacity: 0;
+}
+.slide.left.ng-enter.ng-enter-active,
+.slide.left.ng-leave,
+.slide.right.ng-enter.ng-enter-active,
+.slide.right.ng-leave {
+    left: 0;
+    opacity: 1;
+}
+.slide.left.ng-leave.ng-leave-active,
+.slide.right.ng-enter {
+    left: -100%;
+    opacity: 0;
+}
+.view {
+    width: 500px;
+    height: 300px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+*/
+
+
+/* Masonry */
+
+.masonry-brick {
+    display: none;
+    width: 25%;
+}
+.masonry-brick.loaded {
+    display: block;
+}
+/* Custom Style */
+
+#articles { transition: none; }
+#articles .post {
+    display: block;
+    height: 350px;
+    margin-top: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: none;
+
+}
+#articles .post .caption {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.82)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#d1000000', GradientType=0);
+    /* IE6-9 */
+}

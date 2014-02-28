@@ -1,0 +1,43 @@
+<ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-index="slideIndex">
+    <li ng-repeat="post in items">
+        <div class="page">
+            <h2>{{post.title}}</h2>
+
+            <a class="thumbnail" ng-click="go('/articles/'+item.$$hashKey)" ng-if="post.info1.fullimage.url">
+                <img ng-src="{{ post.info1.fullimage.url }}" alt="{{post.title}}" class="img-responsive">
+            </a>
+            <p ng-bind-html="post.description"></p>
+            carouselIndex: {{ carouselIndex }}
+            <br>carouselBufferIndex: {{ carouselBufferIndex }}
+            <br>
+        </div>
+    </li>
+</ul>
+
+<div class="controls ng-cloak text-center">
+    <a class="btn btn-primary" ng-disabled="slideIndex==0" ng-click="prev()">prev</a>
+    <span>{{ slideIndex + 1 }} / {{ items.length }}</span>
+    <a class="btn btn-primary" ng-click="next()" ng-disabled="slideIndex==items.length-1">next</a>
+    <a class="btn btn-primary" ng-click="pushSlide()">add 3 slides</a>
+</div>
+
+<!--
+<div id="swiper" hm-release="handleHammer($event)" hm-dragleft="handleHammer($event)" hm-dragright="handleHammer($event)" hm-swipeleft="handleHammer($event)" hm-swiperight="handleHammer($event)">
+    <div class="page">
+        <h2>{{post.title}}</h2>
+
+        <a class="thumbnail" ng-click="go('/articles/'+item.$$hashKey)" ng-if="post.info1.fullimage.url">
+            <img ng-src="{{ post.info1.fullimage.url }}" alt="{{post.title}}" class="img-responsive">
+        </a>
+        <p ng-bind-html="post.description"></p>
+    </div>
+
+
+
+<a class="btn btn-primary" ng-click="go('/articles')">Torna agli articoli</a>
+<br/>
+<br/>
+
+</div>
+
+-->
